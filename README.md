@@ -91,18 +91,22 @@ function rotateRotorsAfterInput() {
 
 Se você digitar a sequência **"AAA"**:
 
-1. **1º 'A':** Com os rotores em posição inicial, pode produzir **'H'**
-2. **2º 'A':** Após o Rotor 1 girar, pode produzir **'M'**
-3. **3º 'A':** Após o Rotor 1 girar novamente, pode produzir **'E'**
+1. **1º 'A':** Com os rotores em posição inicial `A A A`, produz **'H'**
+2. **2º 'A':** Após o Rotor 1 girar, produz **'M'**
+3. **3º 'A':** Após o Rotor 1 girar novamente, produz **'E'**
 
-A mesma letra sempre produz saídas diferentes graças à rotação automática dos rotores.
+Após digitar as 3 letras, os rotores mudam de `A A A` para `A A D`.
+
+A mesma letra sempre produz saídas diferentes graças à rotação automática do Rotor, que incrementa sua posição a cada letra digitada.
 
 ### Propriedade Recíproca
 
-A máquina possui uma propriedade única: **se você criptografar uma mensagem e depois digitar o resultado para criptografar novamente, obterá a mensagem original!**
+A máquina possui uma propriedade única: **se você criptografar uma mensagem e depois digitar o resultado para criptografar novamente com a mesma chave inicial, obterá a mensagem original!**
 
-Mensagem: `TESTE` → Cifrado: `VJGGQ`  
-Cifrado: `VJGGQ` → Descriptografado: `TESTE`
+**Exemplo prático:**
+- **Chave Inicial**: Rotores em `A A A`
+- **Resgate 1**: Criptografar `TESTE` → Resultado: `VJGGQ` (Rotores finais: `A A F`)
+- **Reset e Resgate 2**: Resetar para `A A A` e Criptografar `VJGGQ` → Resultado: `TESTE` ✓
 
 ---
 
